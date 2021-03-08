@@ -67,66 +67,79 @@ _The **Oversight** MVP is to complete full CRUD capability for a issue ticket-ba
 
 src
 |__ App.js/
+|__ App.css
 |__ components/
-    |__Header/
-       |__Header.jsx
-       |__Header.css
-    |__ Nav/
-       |__Nav.jsx
-       |__Header.css
+    |__ shared/
+        |__Header/
+           |__Header.jsx
+           |__Header.css
+        |__ Nav/
+           |__Nav.jsx
+           |__Nav.css
     |__ Login/
        |__Login.jsx
        |__Login.css
-    |__ Register/
-       |__Register.jsx
-       |__Register.css
-    |__Recipes/
-       |__ CreateRecipe/
-          |__ CreateRecipe.jsx
-          |__ CreateRecipe.css
-       |__ ShowRecipes/
-          |__ ShowRecipes.jsx
-          |__ ShowRecipes.css
-       |__ Recipe/
-          |__ Recipe.jsx
-          |__ Recipe.css
-       |__ UpdateRecipe/
-          |__ UpdateRecipe.jsx
-          |__ UpdateRecipe.jsx
-       |__ DeleteRecipe/
-          |__ DeleteRecipe.jsx
-          |__ DeleteRecipe.css
-    |__Users/
-       |__ CreateUser/
-          |__ CreateUser.jsx
-          |__ CreateUser.css
-       |__ ShowUser/
-          |__ ShowUser.jsx
-          |__ ShowUser.css
-       |__ UpdateUser/
-          |__ UpdateUser.jsx
-          |__ UpdateUser.jsx
-       |__ DeleteUser/
-          |__ DeleteUser.jsx
-          |__ DeleteUser.css
-    |__Comments/
-      |__ CreateComments/
-          |__ CreateComments.jsx
-          |__ CreateComments.css
-       |__ ShowComments/
-          |__ ShowComments.jsx
-          |__ ShowComments.css
-       |__ UpdateComments/
-          |__ UpdateComments.jsx
-          |__ UpdateComments.jsx
-       |__ DeleteComments/
-          |__ DeleteComments.jsx
-          |__ DeleteComments.css
+    |__ Registration/
+       |__Registration.jsx
+       |__Registration.css
+    |__ GuestLogin/
+       |__GuestLogin.jsx
+       |__GuestLogin.css
+    |__Project/
+       |__Project.jsx
+       |__Project.css
+    |__ProjectCard/
+       |__ProjectCard.jsx
+       |__ProjectCard.css
+    |__ProjectCards/
+       |__ProjectCards.jsx
+       |__ProjectCards.css
+|__ images/
+|__ screens/
+    |__ Login/
+          |__ Login.jsx
+          |__ Login.css
+    |__ Registration/
+          |__ Registration.jsx
+          |__ Registration.css
+    |__ GuestLogin/
+          |__ GuestLogin.jsx
+          |__ GuestLogin.css
+    |__ Home/
+          |__ Home.jsx
+          |__ Home.css
+    |__ Projects/
+          |__ Projects.jsx
+          |__ Projects.css
+    |__ ProjectDetails/
+          |__ ProjectDetails.jsx
+          |__ ProjectDetails.css
+    |__ Tickets/
+          |__ Tickets.jsx
+          |__ Tickets.css
+    |__ TicketDetails/
+          |__ TicketDetails.jsx
+          |__ TicketDetails.css
+    |__ TicketEdit/
+          |__ TicketEdit.jsx
+          |__ TicketEdit.css
+    |__ TicketCreate/
+          |__ TicketCreate.jsx
+          |__ TicketCreate.css
+    |__ ManageUsers/
+          |__ ManageUsers.jsx
+          |__ ManageUsers.css
+    |__ Profile/
+          |__ Profile.jsx
+          |__ Profile.css
+    |__ Notifications/
+          |__ Notifications.jsx
+          |__ Notifications.css
 |__ services/
     |__api-helper.js
-    |__recipes.js
+    |__projects.js
+    |__tickets.js
     |__users.js
-    |__comments.js
 
 
 ```
@@ -135,28 +148,26 @@ src
 
 |   Component    |    Type    | state | props | Description                                                                                                           |
 | :------------: | :--------: | :---: | :---: | :-------------------------------------------------------------------------------------------------------------------- |
-|     Header     | functional |   n   |   n   | _The header will contain the navigation and logo._                                                                    |
-|      Nav       | functional |   y   |   n   | _The navigation will provide a link to each of the pages and have icons that link to info about me and my portfolio._ |
-|      Main      | functional |   y   |   y   | _The main will render the site using cards in flexbox and house the methods to be passed as props._                   |
-| Login/Register | functional |   n   |   y   | _The user will be able to register for and login into their account._                                                 |
-|    Recipes     | functional |   n   |   y   | _The tiles will render the recipes info via props._                                                                   |
-|      User      | functional |   n   |   y   | _The user will be able to create their account and access a profile._                                                 |
-|    Comments    | functional |   n   |   y   | _The comments will render with the recipes._                                                                          |
+|     Header     | functional |   n   |   n   | _The header will contain the all navigation and a welcome statement._|
+|      Nav       | functional |   y   |   n   | _The navigation will provide a link to each of the pages._|
+|      App.js      | functional |   y   |   y   | _The main will render the site using cards in flexbox and house the methods to be passed as props._|
+| Login/Register/GuestLogin | functional |   n   |   y   | _The user will be able to register for and login into their account._|
+|    Projects     | functional |   n   |   y   | _The tiles will render the various projects via props._|
 
 #### Time Estimates
 
-| Task                            | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Sign Up/Login Form          |    L     |     2 hrs      |    TBD hrs    |     TBD     |
-| Create Front-End CRUD Actions   |    H     |     20 hrs     |    TBD hrs    |     TBD     |
-| Create Back-End CRUD Actions    |    H     |     12 hrs     |    TBD hrs    |     TBD     |
-| Create seed data                |    M     |     6 hrs      |    TBD hrs    |     TBD     |
-| Add Front-End CSS (boilerplate) |    L     |     4 hrs      |    TBD hrs    |     TBD     |
-| Add Front-End CSS (advanced)    |    H     |     12 hrs     |    TBD hrs    |     TBD     |
-| **Post-MVP**                    |    M     |     25 hrs     |    TBD hrs    |     TBD     |
-| QA & Test application           |    M     |     6 hrs      |    TBD hrs    |     TBD     |
-| Deployment                      |    H     |     5 hrs      |    TBD hrs    |     TBD     |
-| TOTAL                           |          |     73 hrs     |    TBD hrs    |     TBD     |
+| Task                            | Priority | Estimated Time | Time Invested |
+| ------------------------------- | :------: | :------------: | :-----------: |
+| Proposal          |    H     |     6 hrs      |    15 hrs    |
+| Create Front-End CRUD Actions   |    H     |     20 hrs     |    TBD hrs    |
+| Create Back-End CRUD Actions    |    H     |     12 hrs     |    TBD hrs    |
+| Create seed data                |    M     |     6 hrs      |    TBD hrs    |
+| Add Front-End CSS (boilerplate) |    L     |     4 hrs      |    TBD hrs    |
+| Add Front-End CSS (advanced)    |    H     |     12 hrs     |    TBD hrs    |
+| **Post-MVP**                    |    M     |     25 hrs     |    TBD hrs    |
+| QA & Test application           |    M     |     6 hrs      |    TBD hrs    |
+| Deployment                      |    H     |     5 hrs      |    TBD hrs    |
+| TOTAL                           |          |     73 hrs     |    TBD hrs    |
 
 <br>
 
