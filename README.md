@@ -55,11 +55,12 @@ _The **Oversight** MVP is to complete full CRUD capability for a issue ticket-ba
 ### Client (Front End)
 
 #### Wireframes
- 
+![ERD](oversight_ERD.png)
+
 ![Wireframe] (oversight_wireframe.png)
 - Desktop View
 
-[Desktop Prototype](https://xd.adobe.com/view/9cfd32a9-50c8-4ffd-9f09-a59b4d61293e-c9ae/?fullscreen&hints=off)
+[Desktop Prototype](oversight_ERD.png)
 
 - Mobile View (In Progress)
 
