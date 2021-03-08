@@ -160,14 +160,10 @@ src
 | ------------------------------- | :------: | :------------: | :-----------: |
 | Proposal          |    H     |     6 hrs      |    15 hrs    |
 | Create Front-End CRUD Actions   |    H     |     20 hrs     |    TBD hrs    |
-| Create Back-End CRUD Actions    |    H     |     12 hrs     |    TBD hrs    |
-| Create seed data                |    M     |     6 hrs      |    TBD hrs    |
-| Add Front-End CSS (boilerplate) |    L     |     4 hrs      |    TBD hrs    |
-| Add Front-End CSS (advanced)    |    H     |     12 hrs     |    TBD hrs    |
-| **Post-MVP**                    |    M     |     25 hrs     |    TBD hrs    |
-| QA & Test application           |    M     |     6 hrs      |    TBD hrs    |
-| Deployment                      |    H     |     5 hrs      |    TBD hrs    |
-| TOTAL                           |          |     73 hrs     |    TBD hrs    |
+| Create Rails Back-End CRUD Actions    |    H     |     12 hrs     |    TBD hrs    |
+| Create seed data                |    M     |     3 hrs      |    TBD hrs    |
+| Add Front-End CSS (advanced)    |    H     |     6 hrs     |    TBD hrs    |
+| TOTAL                           |          |     56 hrs     |    TBD hrs    |
 
 <br>
 
@@ -183,10 +179,11 @@ src
 
 ## Post-MVP
 
-- _Implement full CRUD on the User and Comments components_
-- _Include authentication for Users_
-- _Advanced CSS with hovers and possible changes varying state_
-- _Build out favorites/likes functionality_
+- _Add ticket history attribute_
+- _Allow for ticket descriptions to include attachments_
+- _Include comments/messenger for tickets_
+- _Improved UX_
+- _More analytics regarding project progress_
 
 ---
 
