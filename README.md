@@ -58,8 +58,7 @@ _The **Oversight** MVP is to complete full CRUD capability for a issue ticket-ba
 ![ERD](oversight_wireframe.png)
 
 #### Component Tree
-
-![Component Tree](LLVV-compTree.png)
+![ERD](oversight_component_tree.png)
 
 #### Component Hierarchy
 
