@@ -207,7 +207,7 @@ Ticket.create!(
   status: "Open",
   tipe: "Special Task",
   user: @ben,
-  project: @graduation,
+  project: @graduate,
 )
 
 Ticket.create!(
@@ -217,7 +217,7 @@ Ticket.create!(
   status: "Open",
   tipe: "Special Task",
   user: @ben,
-  project: @graduation,
+  project: @graduate,
 )
 
 puts "#{Ticket.count} tickets created"
