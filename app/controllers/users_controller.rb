@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   
-  # GET /projects
+  # GET /users
   def index
-    @users = Users.all
+    @users = User.all
     render json: @users
   end
 

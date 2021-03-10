@@ -10,19 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_10_144235) do
+ActiveRecord::Schema.define(version: 2021_03_10_175943) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "assigned_projects", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "project_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["project_id"], name: "index_assigned_projects_on_project_id"
-    t.index ["user_id"], name: "index_assigned_projects_on_user_id"
-  end
 
   create_table "projects", force: :cascade do |t|
     t.text "name"
@@ -32,12 +23,17 @@ ActiveRecord::Schema.define(version: 2021_03_10_144235) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "projects_users", id: false, force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "project_id", null: false
+  end
+
   create_table "tickets", force: :cascade do |t|
     t.text "name"
     t.text "description"
     t.text "severity"
     t.text "status"
-    t.text "type"
+    t.text "tipe"
     t.bigint "user_id", null: false
     t.bigint "project_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -57,8 +53,6 @@ ActiveRecord::Schema.define(version: 2021_03_10_144235) do
     t.text "image"
   end
 
-  add_foreign_key "assigned_projects", "projects"
-  add_foreign_key "assigned_projects", "users"
   add_foreign_key "tickets", "projects"
   add_foreign_key "tickets", "users"
 end
