@@ -1,0 +1,44 @@
+.subhead {
+  font-weight: 800;
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+
+.login-input {
+  color:  var(--tone12);
+  background-color: var(--tone1); 
+  height: 60px;
+  width: 370px;
+  font-size: 22px;
+  font-weight: 700;
+  border: 1px solid var(--tone12);
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.other-login-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+.decoration-link {
+  text-decoration: underline black;
+}
+
+.login-button {
+  margin-bottom: 30px;
+}

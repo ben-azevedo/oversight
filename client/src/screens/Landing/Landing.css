@@ -1,0 +1,56 @@
+.landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://i.pinimg.com/originals/f6/80/3f/f6803fd154f40b372c24bae4c37f3bb3.jpg);
+  height: 100vh;
+  width: 100vw;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--tone1);
+  border-radius: 30px;
+  width: 500px;
+  box-shadow: 0 0 15px black;
+}
+
+.logo {
+  width: 300px;
+  margin: 40px;
+  margin-bottom: 20px;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:  var(--tone12);
+  background-color: var(--tone5); 
+  height: 60px;
+  width: 392px;
+  margin: 40px;
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  border: 1px solid var(--tone12);
+  padding: 0;
+}
+
+.login-button,
+.login-button:focus,
+.login-button:visited,
+.login-button:hover,
+.login-button:active {
+  text-decoration: none !important;
+}
+
+.login-button:hover {
+  color:  var(--tone1);
+  transition: all 0.25s ease-in-out;
+  background-color: var(--tone12); 
+  border: 1px solid var(--tone12);
+}

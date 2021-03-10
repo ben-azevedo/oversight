@@ -1,0 +1,23 @@
+.profile-card {
+  height: 650px;
+  width: 535px;
+  background: var(--tone1);
+  border-radius: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.profile-image {
+  height: 295px;
+}
+
+.profile-info {
+  margin: 10px;
+}
+
+.top-info {
+  margin-top: 40px;
+}

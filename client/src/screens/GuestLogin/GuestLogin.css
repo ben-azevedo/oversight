@@ -1,0 +1,45 @@
+.guest-login-container {
+  width: 600px;
+  text-decoration: black;
+}
+
+.guest-tiles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.guest-tile {
+  width: 110px;
+  height: 145px;
+  border: 2px solid var(--tone12);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px;
+  color: var(--tone12);
+}
+
+.guest-tile:hover {
+  background: var(--tone12);
+  color: var(--tone1);
+  transition: all ease-in-out 0.25s;
+}
+
+.tile-logo {
+  height: 100px;
+}
+
+.guest-login-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
