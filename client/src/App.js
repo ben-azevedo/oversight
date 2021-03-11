@@ -20,9 +20,10 @@ import ManageUsers from './screens/ManageUsers/ManageUsers';
 import { loginUser, registerUser, verifyUser, removeToken } from './services/auth';
 import { getAllProjects, getOneProject } from './services/projects';
 import { destroyTicket, getAllTickets, postTicket, putTicket } from './services/tickets';
+import { getAllUsers, getOneUser } from './services/users';
 
 function App() {
-
+  const [users, setUsers] = useState([]);
   const [projects, setProjects] = useState([]);
   const [tickets, setTickets] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
@@ -86,6 +87,17 @@ function App() {
     fetchTicket();
   }, [])
 
+  // get all the users
+  useEffect(() => {
+    const fetchUser = async () => {
+      const userList = await getAllUsers();
+      console.log('fetch process');
+      console.log(userList);
+      setUsers(userList);
+    }
+    fetchUser();
+  }, [])
+
   // delete tickets
   const handleDelete = async (id) => {
     await destroyTicket(id);
@@ -137,7 +149,7 @@ function App() {
           <Projects projects={projects} currentUser={currentUser}/>
         </Route>
         <Route exact path="/projects/:id">
-          <ProjectDetails tickets={tickets} projects={projects} currentUser={currentUser}/>
+          <ProjectDetails users={users} tickets={tickets} projects={projects} currentUser={currentUser}/>
         </Route>
         <Route exact path="/tickets/:id">
           <TicketDetails tickets={tickets} handleDelete={handleDelete} currentUser={currentUser}/>

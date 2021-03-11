@@ -25,3 +25,15 @@
 .notifications-spacer {
   height: 50px;
 }
+
+.e-p-name {
+  width: 220px;
+}
+
+.e-description {
+  width: 800px;
+}
+
+.e-created {
+  width: 220px;
+}

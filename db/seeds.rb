@@ -155,7 +155,7 @@ puts "#{User.count} users created"
 
 @oversight = Project.create!(
   name: "Oversight (P4)",
-  description: "KGB Adventures is a travel website that helps plan the adventure of your dreams. The user has the options to sign in, sign out, and sign up. Once logged in, the user will have the ability to edit and delete an adventure as well as add an excursion. This MERN stack app is website and mobile friendly.",
+  description: "Oversight is a collaborative project management tool used for resource allocation, time accounting, priority management, and productivity workflow through the use of a centralized registry of issue tickets (also known by the name bug tracker or issue/progress tracker).",
   image: "https://beanstalkwebsolutions.com/blog/wp-content/uploads/2017/03/photo_83099_20161120.jpg",
   users: [@david, @ben]
 )
