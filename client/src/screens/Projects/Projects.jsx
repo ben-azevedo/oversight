@@ -10,7 +10,11 @@ function Projects(props) {
     <Link to={`/projects/${project.id}`}>
       <div className="project-card">
         <div className="project-card-name">{project.name}</div>
-        <img className="project-card-image" src={project.image}/>
+        <div className="project-image">
+          <div className="project-card-image-container">
+            <img className="project-card-image" src={project.image} />
+          </div>
+        </div>
       </div>
     </Link>
   ));
@@ -19,7 +23,7 @@ function Projects(props) {
 
   return (
     <Layout onChange={onChange} user={currentUser}>
-      <div>
+      <div className="project-cards">
         {projectsJSX}
       </div>
     </Layout>

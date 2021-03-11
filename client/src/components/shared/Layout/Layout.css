@@ -111,6 +111,7 @@ span {
 
 .top-nav-links {
   position: absolute;
+  top: 1px;
   right: 15px;
   display: flex;
   flex-direction: row;
@@ -135,8 +136,10 @@ span {
 .page-content {
   height: 92vh;
   background: var(--tone4);
-  width: 100vw;
-  margin-left: 310px;
+  position: absolute;
+  left: 310px;
+  top: 8vh;
+  width: 1500px;
 } 
 
 .content {

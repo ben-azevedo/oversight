@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import './TicketDetails.css';
 
 function TicketDetails(props) {
-  const { currentUser, onChange, handleDelete } = props;
+  const { tickets, currentUser, onChange, handleDelete } = props;
 
   return (
-    <Layout onChange={ onChange } currentUser={currentUser}>
-      <Link to={`/foods/${food.id}/edit`}><button>edit</button></Link>
-      <button onClick={() => handleDelete(food.id)}>delete</button>
+    <Layout onChange={onChange} currentUser={currentUser}>
+      <div className="ticket-detail-container">
+        <Link to={`/tickets/${tickets.id}/edit`}><button>edit</button></Link>
+        <button onClick={() => handleDelete(tickets.id)}>delete</button>
+      </div>
     </Layout>
   );
 }

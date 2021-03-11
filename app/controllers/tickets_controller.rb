@@ -5,12 +5,12 @@ class TicketsController < ApplicationController
   def index
     @tickets = Ticket.all
 
-    render json: @tickets
+    render json: @tickets, include: [:user, :project]
   end
 
   # GET /tickets/1
   def show
-    render json: @ticket
+    render json: @ticket, include: [:user, :project]
   end
 
   # POST /tickets

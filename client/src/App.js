@@ -132,17 +132,17 @@ function App() {
         <Route exact path="/projects/:id">
           <ProjectDetails currentUser={currentUser}/>
         </Route>
-        <Route exact path="/tickets">
-          <Tickets currentUser={currentUser}/>
-        </Route>
-        <Route exact path="/tickets/:id">
-          <TicketDetails handleDelete={handleDelete} currentUser={currentUser}/>
-        </Route>
         <Route exact path="/tickets/:id/edit">
           <TicketEdit tickets={tickets} handleUpdate={handleUpdate} currentUser={currentUser}/>
         </Route>
+        <Route exact path="/tickets/:id">
+          <TicketDetails tickets={tickets} handleDelete={handleDelete} currentUser={currentUser}/>
+        </Route>
+        <Route exact path="/tickets">
+          <Tickets tickets={tickets} currentUser={currentUser}/>
+        </Route>
         <Route exact path="/add-ticket">
-          <TicketCreate currentUser={currentUser}/>
+          <TicketCreate tickets={tickets} currentUser={currentUser}/>
         </Route>
         <Route path="/manage-users">
           <ManageUsers currentUser={currentUser}/>

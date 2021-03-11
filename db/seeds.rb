@@ -140,14 +140,14 @@ puts "#{User.count} users created"
 @kgb = Project.create!(
   name: "KGB Adventures (P3)",
   description: "KGB Adventures is a travel website that helps plan the adventure of your dreams. The user has the options to sign in, sign out, and sign up. Once logged in, the user will have the ability to edit and delete an adventure as well as add an excursion. This MERN stack app is website and mobile friendly.",
-  image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fqph.fs.quoracdn.net%2Fmain-qimg-d6c9a75c89bb984aae6bec8f199eb610-c&f=1&nofb=1",
+  image: "https://s1.1zoom.me/big0/469/Vladimir_Putin_Men_Brown_Bears_Run_533027_1280x800.jpg",
   users: [@katiana, @grady, @ben]
 )
 
 @oversight = Project.create!(
   name: "Oversight (P4)",
   description: "KGB Adventures is a travel website that helps plan the adventure of your dreams. The user has the options to sign in, sign out, and sign up. Once logged in, the user will have the ability to edit and delete an adventure as well as add an excursion. This MERN stack app is website and mobile friendly.",
-  image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fqph.fs.quoracdn.net%2Fmain-qimg-d6c9a75c89bb984aae6bec8f199eb610-c&f=1&nofb=1",
+  image: "https://beanstalkwebsolutions.com/blog/wp-content/uploads/2017/03/photo_83099_20161120.jpg",
   users: [@david, @ben]
 )
 
