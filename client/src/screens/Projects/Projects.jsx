@@ -6,22 +6,21 @@ import './Projects.css';
 function Projects(props) {
   const { projects, handleDelete, currentUser, onChange  } = props;
 
+  const projectsJSX = projects.map((project, index) => (
+    <Link to={`/projects/${project.id}`}>
+      <div className="project-card">
+        <div className="project-card-name">{project.name}</div>
+        <img className="project-card-image" src={project.image}/>
+      </div>
+    </Link>
+  ));
+
+  console.log(projects)
+
   return (
     <Layout onChange={onChange} user={currentUser}>
       <div>
-        {projects.map((project) => (
-          <React.Fragment key={project.id}>
-            <Link to={`/projects/${project.id}`}><p>{project.name}</p></Link>
-            { project.user_id === currentUser?.id &&
-              <>
-                <Link to={`/projects/${project.id}/edit`}><button>edit</button></Link>
-                <button onClick={() => handleDelete(project.id)}>delete</button>
-              </>
-            }
-          </React.Fragment>
-        ))}
-        <br />
-        <Link to='/projects/new'><button>Create</button></Link>
+        {projectsJSX}
       </div>
     </Layout>
   );

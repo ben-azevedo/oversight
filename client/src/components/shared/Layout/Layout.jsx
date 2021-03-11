@@ -18,25 +18,25 @@ const Layout = (props) => {
         <div className="nav-links">
           <Link to="/home">
             <div className="nav-link">
-              <i class="fa fa-home fa-2x"></i>
+              <i className="fa fa-home fa-2x"></i>
               <div className="nav-label">Home</div>
             </div>
           </Link>
           <Link to="/projects">
             <div className="nav-link">
-              <i class="fa fa-flask fa-2x"></i>
+              <i className="fa fa-flask fa-2x"></i>
               <div className="nav-label">Projects</div>
             </div>
           </Link>
           <Link to="/tickets">
             <div className="nav-link">
-              <i class="fa fa-ticket fa-2x"></i>
+              <i className="fa fa-ticket fa-2x"></i>
               <div className="nav-label">Tickets</div>
             </div>
           </Link>
           <Link to="/manage-users">
             <div className="nav-link">
-              <i class="fa fa-users fa-2x"></i>
+              <i className="fa fa-users fa-2x"></i>
               <div className="nav-label">Manage Users</div>
             </div>
           </Link>
@@ -48,13 +48,13 @@ const Layout = (props) => {
           <div className='top-nav-links'>
             <Link to="/my-profile">
               <div className="top-nav-link">
-                <i class="fa fa-user-circle-o fa-2x"></i>
+                <i className="fa fa-user-circle-o fa-2x"></i>
                 <div className="nav-label">My Profile</div>
               </div>
             </Link>
             <Link to="/my-notifications">
               <div className="top-nav-link">
-                <i class="fa fa-bell-o fa-2x"></i>
+                <i className="fa fa-bell-o fa-2x"></i>
                 <div className="nav-label">Notifications</div>
               </div>
             </Link>

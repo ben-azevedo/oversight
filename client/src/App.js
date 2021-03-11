@@ -18,25 +18,29 @@ import TicketCreate from './screens/TicketCreate/TicketCreate';
 import ManageUsers from './screens/ManageUsers/ManageUsers';
 
 import { loginUser, registerUser, verifyUser, removeToken } from './services/auth';
+import { getAllProjects, getOneProject } from './services/projects';
+import { destroyTicket, getAllTickets, postTicket, putTicket } from './services/tickets';
 
 function App() {
 
+  const [projects, setProjects] = useState([]);
+  const [tickets, setTickets] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
   const [error, setError] = useState(null);
   const history = useHistory();
 
   useEffect(() => {
     const handleVerify = async () => {
-      const currentUser = await verifyUser();
-      setCurrentUser(currentUser)
+      const user = await verifyUser();
+      setCurrentUser(user)
     }
     handleVerify();
   }, [])
 
   const handleLogin = async (formData) => {
     try {
-      const currentUser = await loginUser(formData);
-      setCurrentUser(currentUser);
+      const user = await loginUser(formData);
+      setCurrentUser(user);
       setError(null);
       history.push('/');
     } catch (e) {
@@ -46,8 +50,8 @@ function App() {
 
   const handleRegister = async (formData) => {
     try {
-      const currentUser = await registerUser(formData);
-      setCurrentUser(currentUser);
+      const user = await registerUser(formData);
+      setCurrentUser(user);
       history.push('/');
     } catch (e) {
       setError("invalid sign up info")
@@ -58,6 +62,42 @@ function App() {
     setCurrentUser(null);
     localStorage.removeItem('authToken');
     removeToken();
+  }
+  
+  // get all the projects
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const projectsList = await getAllProjects();
+      console.log('fetch process');
+      console.log(projectsList);
+      setProjects(projectsList);
+    }
+    fetchProjects();
+  }, [])
+
+  // get all the tickets
+  useEffect(() => {
+    const fetchTicket = async () => {
+      const ticketList = await getAllTickets();
+      console.log('fetch process');
+      console.log(ticketList);
+      setTickets(ticketList);
+    }
+    fetchTicket();
+  }, [])
+
+  // delete tickets
+  const handleDelete = async (id) => {
+    await destroyTicket(id);
+    setTickets(prevState => prevState.filter((ticket) => ticket.id !== id))
+  }
+
+  const handleUpdate = async (id, formData) => {
+    const updatedTicket = await putTicket(id, formData);
+    setTickets(prevState => prevState.map((ticket) => {
+      return ticket.id === Number(id) ? updatedTicket : ticket
+    }));
+    history.push('/tickets');
   }
 
   return (
@@ -78,34 +118,34 @@ function App() {
           <GuestLogin />
         </Route>
         <Route path="/home">
-          <Home />
+          <Home currentUser={currentUser}/>
         </Route>
         <Route path="/my-profile">
-          <Profile />
+          <Profile currentUser={currentUser}/>
         </Route>
         <Route path="/my-notifications">
-          <Notifications />
+          <Notifications currentUser={currentUser}/>
         </Route>
         <Route exact path="/projects">
-          <Projects />
+          <Projects projects={projects} currentUser={currentUser}/>
         </Route>
         <Route exact path="/projects/:id">
-          <ProjectDetails />
+          <ProjectDetails currentUser={currentUser}/>
         </Route>
         <Route exact path="/tickets">
-          <Tickets />
+          <Tickets currentUser={currentUser}/>
         </Route>
         <Route exact path="/tickets/:id">
-          <TicketDetails />
+          <TicketDetails handleDelete={handleDelete} currentUser={currentUser}/>
         </Route>
         <Route exact path="/tickets/:id/edit">
-          <TicketEdit />
+          <TicketEdit tickets={tickets} handleUpdate={handleUpdate} currentUser={currentUser}/>
         </Route>
         <Route exact path="/add-ticket">
-          <TicketCreate />
+          <TicketCreate currentUser={currentUser}/>
         </Route>
         <Route path="/manage-users">
-          <ManageUsers />
+          <ManageUsers currentUser={currentUser}/>
         </Route>
       </Switch>
     </div>
