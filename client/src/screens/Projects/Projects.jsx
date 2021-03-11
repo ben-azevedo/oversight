@@ -22,7 +22,7 @@ function Projects(props) {
   console.log(projects)
 
   return (
-    <Layout onChange={onChange} user={currentUser}>
+    <Layout onChange={onChange} currentUser={currentUser}>
       <div className="project-cards">
         {projectsJSX}
       </div>
