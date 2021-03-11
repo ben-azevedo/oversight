@@ -11,8 +11,9 @@
 
 .left-nav {
   width: 310px;
-  height: 100vh;
+  height: 140vh;
   left: 0;
+  top: 0;
   background: var(--tone1);
   position: absolute;
   box-shadow: 5px 10px 18px var(--tone2);
@@ -135,7 +136,7 @@ span {
 }
 
 .page-content {
-  height: 92vh;
+  height: 132vh;
   background: var(--tone4);
   position: absolute;
   left: 310px;
