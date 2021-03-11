@@ -1,0 +1,61 @@
+.ticket-edit-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-edit-header {
+  width: 520px;
+  background: var(--tone9);
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  color: var(--tone1);
+  font-size: 22px;
+  font-weight: 600;
+  padding-left: 40px;
+}
+
+.ticket-edit-content {
+  width: 560px;
+  background: var(--tone1);
+}
+
+.ticket-edit-content form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  font-size: 20px;
+}
+
+.ticket-edit-content form label {
+  margin: 10px;
+}
+
+.ticket-edit-button {
+  height: 45px;
+  width: 150px;
+  font-size: 18px;
+  color: var(--tone9);
+  background: var(--tone1);
+  border: 1px solid var(--tone9);
+  border-radius: 8px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket-edit-button-label {
+  padding-left: 12px;
+}
+
+.ticket-edit-button:hover {
+  background: var(--tone12);
+  color: var(--tone1);
+  transition: all ease-in-out 0.25s;
+}

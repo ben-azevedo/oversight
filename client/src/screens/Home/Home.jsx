@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 
 function Home(props) {
-  const { user, onChange } = props;
+  const { currentUser, onChange } = props;
 
   return (
-    <Layout onChange={ onChange } user={props.user}>
+    <Layout onChange={ onChange } currentUser={currentUser}>
       <div>
         <div className="home-header">Team Progress</div>
         <img className="home-graph" src={graph}/>

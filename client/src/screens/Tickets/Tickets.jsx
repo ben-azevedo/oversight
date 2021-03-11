@@ -26,7 +26,7 @@ function Tickets(props) {
   console.log(tickets)
 
   return (
-    <Layout onChange={onChange} user={currentUser}>
+    <Layout onChange={onChange} currentUser={currentUser}>
       <div>
         <div className="home-header">Tickets</div>
         <div className="ticket-list">

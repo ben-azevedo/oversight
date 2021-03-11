@@ -1,4 +1,90 @@
 .ticket-detail-container {
   width: 72vw;
   background: var(--tone1);
+  padding: 37px;
+  position: relative
+}
+
+.ticket-detail-image {
+  height: 392px;
+  width: 463px;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid var(--tone7);
+}
+
+.ticket-severity {
+  font-size: 24px;
+  border-radius: 0 0 0 57px;
+  height: 57px;
+  width: 250px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.severe {
+  margin-left: 10px;
+}
+
+.ticket-desciptors {
+  margin: 85px;
+}
+
+.ticket-title {
+  height: 100px;
+  font-size: 32px;
+}
+
+.ticket-description {
+  font-size: 24px;
+}
+
+.ticket-top-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ticket-bottom-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.ticket-buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.ticket-actions {
+  height: 57px;
+  width: 210px;
+  font-size: 24px;
+  color: var(--tone9);
+  background: var(--tone1);
+  border: 1px solid var(--tone9);
+  border-radius: 8px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket-button-label {
+  padding-left: 12px;
+}
+
+.ticket-actions:hover {
+  background: var(--tone12);
+  color: var(--tone1);
+  transition: all ease-in-out 0.25s;
 }

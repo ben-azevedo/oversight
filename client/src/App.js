@@ -12,7 +12,7 @@ import Notifications from './screens/Notifications/Notifications';
 import Projects from './screens/Projects/Projects';
 import ProjectDetails from './screens/ProjectDetails/ProjectDetails';
 import Tickets from './screens/Tickets/Tickets';
-import TicketDetails from './screens/TicketEdit/TicketEdit';
+import TicketDetails from './screens/TicketDetails/TicketDetails';
 import TicketEdit from './screens/TicketEdit/TicketEdit';
 import TicketCreate from './screens/TicketCreate/TicketCreate';
 import ManageUsers from './screens/ManageUsers/ManageUsers';
@@ -42,7 +42,7 @@ function App() {
       const user = await loginUser(formData);
       setCurrentUser(user);
       setError(null);
-      history.push('/');
+      history.push('/home');
     } catch (e) {
       setError("invalid login credentials");
     }
@@ -52,7 +52,7 @@ function App() {
     try {
       const user = await registerUser(formData);
       setCurrentUser(user);
-      history.push('/');
+      history.push('/sign-in');
     } catch (e) {
       setError("invalid sign up info")
     }
@@ -115,7 +115,7 @@ function App() {
           <Registration handleRegister={handleRegister}/>
         </Route>
         <Route path="/guest-sign-in">
-          <GuestLogin />
+          <GuestLogin handleLogin={handleLogin}/>
         </Route>
         <Route path="/home">
           <Home currentUser={currentUser}/>
@@ -124,7 +124,7 @@ function App() {
           <Profile currentUser={currentUser}/>
         </Route>
         <Route path="/my-notifications">
-          <Notifications currentUser={currentUser}/>
+          <Notifications tickets={tickets} projects={projects} currentUser={currentUser}/>
         </Route>
         <Route exact path="/projects">
           <Projects projects={projects} currentUser={currentUser}/>
@@ -132,11 +132,11 @@ function App() {
         <Route exact path="/projects/:id">
           <ProjectDetails currentUser={currentUser}/>
         </Route>
-        <Route exact path="/tickets/:id/edit">
-          <TicketEdit tickets={tickets} handleUpdate={handleUpdate} currentUser={currentUser}/>
-        </Route>
         <Route exact path="/tickets/:id">
           <TicketDetails tickets={tickets} handleDelete={handleDelete} currentUser={currentUser}/>
+        </Route>
+        <Route exact path="/tickets/:id/edit">
+          <TicketEdit tickets={tickets} handleUpdate={handleUpdate} currentUser={currentUser}/>
         </Route>
         <Route exact path="/tickets">
           <Tickets tickets={tickets} currentUser={currentUser}/>

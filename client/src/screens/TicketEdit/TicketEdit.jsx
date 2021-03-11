@@ -6,9 +6,15 @@ import './TicketEdit.css';
 
 function TicketEdit(props) {
   const [formData, setFormData] = useState({
-    name: ''
+    name: '',
+    description: '',
+    severity: '',
+    tipe: '',
+    status: '',
+    user_id: '',
+    project_id: '',
   });
-  const { name } = formData;
+  const { name, description, severity, tipe, status, user_id, project_id } = formData;
   const { tickets, handleUpdate } = props;
   const { id } = useParams();
 
@@ -16,7 +22,13 @@ function TicketEdit(props) {
     const prefillFormData = () => {
       const ticketItem = tickets.find((ticket) => ticket.id === Number(id));
       setFormData({
-        name: ticketItem.name
+        name: ticketItem.name,
+        description: ticketItem.description,
+        severity: ticketItem.severity,
+        tipe: ticketItem.tipe,
+        status: ticketItem.status,
+        user_id: ticketItem?.user.username,
+        project_id: ticketItem?.project.name
       });
     }
     if (tickets.length) {
@@ -34,22 +46,77 @@ function TicketEdit(props) {
 
   return (
     <Layout currentUser={props.currentUser}>
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        handleUpdate(id, formData);
-      }}>
-        <h3>Edit Ticket</h3>
-        <label>Name:
-          <input
-            type='text'
-            name='name'
-            value={name}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <button>Submit</button>
-      </form>
+      <div className="ticket-edit-container">
+        <div className="ticket-edit-header">Edit Ticket</div>
+        <div className="ticket-edit-content">
+          <form onSubmit={(e) => {
+            e.preventDefault();
+            handleUpdate(id, formData);
+          }}>
+            <label><span>Name: </span>
+              <input
+                type='text'
+                name='name'
+                value={name}
+                onChange={handleChange}
+              />
+            </label>
+            <label><span>Description: </span>
+              <input
+                type='text'
+                name='description'
+                value={description}
+                onChange={handleChange}
+              />
+            </label>
+            <label><span>Severity: </span>
+              <input
+                type='text'
+                name='severity'
+                value={severity}
+                onChange={handleChange}
+              />
+            </label>
+            <label><span>Type: </span>
+              <input
+                type='text'
+                name='tipe'
+                value={tipe}
+                onChange={handleChange}
+              />
+            </label>
+            <label><span>Status: </span>
+              <input
+                type='text'
+                name='status'
+                value={status}
+                onChange={handleChange}
+              />
+            </label>
+            <label><span>Assigned to: </span>
+              <input
+                type='text'
+                name='user_id'
+                value={user_id}
+                onChange={handleChange}
+              />
+            </label>
+            <label><span>Project: </span>
+              <input
+                type='text'
+                name='project_id'
+                value={project_id}
+                onChange={handleChange}
+              />
+            </label>
+            <br />
+            <button className="ticket-edit-button">
+              <i class="fa fa-pencil"></i>
+              <div className="ticket-edit-button-label">Update</div>
+            </button>
+          </form>
+        </div>
+      </div>
     </Layout>
   );
 }

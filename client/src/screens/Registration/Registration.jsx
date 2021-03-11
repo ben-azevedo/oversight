@@ -74,9 +74,7 @@ export default function Registration(props) {
             <option value="Intern">Intern</option>
           </select>
           <br />
-          <Link to="/sign-in">
-            <button style={{marginTop: "-19px"}} className="login-button">Submit</button>
-          </Link>
+          <button style={{marginTop: "-19px"}} className="login-button">Submit</button>
         </form>
         <div className="other-login-links">
           <div>Already have an account? <Link to="/sign-in" className="decoration-link">Sign In</Link></div>

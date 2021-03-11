@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Layout = (props) => {
-  const { user, permission, onChange } = props;
+  const { currentUser, permission, onChange } = props;
 
   return (
     <div className='layout'>
@@ -12,7 +12,7 @@ const Layout = (props) => {
         <img className="logo-background" src={logo} />
         <div className="greeting">
           <div className="welcome">Welcome,</div>
-          <div className="username">Barbara</div>
+          <div className="username">{currentUser?.username.split(" ")[0]}</div>
         </div>
         <div className="divide-line"></div>
         <div className="nav-links">
@@ -44,7 +44,7 @@ const Layout = (props) => {
       </div>
       <div className='right-nav'>
         <div className='top-nav'>
-          <div className='permission-statement'>Logged in as: <span>Administrator</span></div>
+          <div className='permission-statement'>Logged in as: <span>{currentUser?.permission}</span></div>
           <div className='top-nav-links'>
             <Link to="/my-profile">
               <div className="top-nav-link">

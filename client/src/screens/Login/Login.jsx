@@ -55,9 +55,7 @@ function Landing(props) {
             onChange={handleChange}
           />
           <br/>
-          <Link to="/home">
-            <button className="login-button" style={{ marginTop: "-19px"}}>SUBMIT</button>
-          </Link>
+          <button className="login-button" style={{ marginTop: "-19px"}}>SUBMIT</button>
         </form>
         <div className="other-login-links">
           <div>Create an account? <Link to="/sign-up" className="decoration-link">Sign Up</Link></div>
