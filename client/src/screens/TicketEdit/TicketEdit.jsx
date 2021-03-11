@@ -27,8 +27,8 @@ function TicketEdit(props) {
         severity: ticketItem.severity,
         tipe: ticketItem.tipe,
         status: ticketItem.status,
-        user_id: ticketItem?.user.username,
-        project_id: ticketItem?.project.name
+        user_id: ticketItem?.user?.id,
+        project_id: ticketItem?.project?.id
       });
     }
     if (tickets.length) {

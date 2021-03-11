@@ -90,6 +90,7 @@ function App() {
   const handleDelete = async (id) => {
     await destroyTicket(id);
     setTickets(prevState => prevState.filter((ticket) => ticket.id !== id))
+    history.push('/tickets');
   }
 
   const handleUpdate = async (id, formData) => {
@@ -100,6 +101,12 @@ function App() {
     history.push('/tickets');
   }
 
+  const handleCreate = async (formData) => {
+    const newTicket = await postTicket(formData);
+    setTickets(prevState => [...prevState, newTicket]);
+    history.push('/tickets');
+  }
+    
   return (
     <div className="App">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
@@ -142,7 +149,7 @@ function App() {
           <Tickets tickets={tickets} currentUser={currentUser}/>
         </Route>
         <Route exact path="/add-ticket">
-          <TicketCreate tickets={tickets} currentUser={currentUser}/>
+          <TicketCreate tickets={tickets} currentUser={currentUser} handleCreate={handleCreate}/>
         </Route>
         <Route path="/manage-users">
           <ManageUsers currentUser={currentUser}/>

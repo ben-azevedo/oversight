@@ -11,13 +11,13 @@ function Tickets(props) {
   const ticketsJSX = tickets.map((ticket, index) => (
     <Link to={`/tickets/${ticket.id}`}>
       <div className="ticket-line">
-        <div>{ticket.severity}</div>
-        <div>{ticket.name}</div>
-        <div>{ticket.project.name}</div>
-        <div>{ticket.user.username}</div>
-        <div>{ticket.tipe}</div>
-        <div>{ticket.status}</div>
-        <div>{ticket.created_at}</div>
+        <div className="a-severity">{ticket.severity}</div>
+        <div className="a-name">{ticket.name}</div>
+        <div className="a-p-name">{ticket.project?.name}</div>
+        <div className="a-assigned">{ticket.user?.username}</div>
+        <div className="a-type">{ticket.tipe}</div>
+        <div className="a-status">{ticket.status}</div>
+        <div className="a-created">{ticket.created_at}</div>
         <div>details</div>
       </div>
     </Link>
@@ -31,15 +31,18 @@ function Tickets(props) {
         <div className="home-header">Tickets</div>
         <div className="ticket-list">
           <div className="ticket-labels">
-            <div className="ticket-severity">severity</div>
-            <div className="ticket-severity">severity</div>
-            <div className="ticket-severity">severity</div>
-            <div className="ticket-severity">severity</div>
-            <div className="ticket-severity">severity</div>
-            <div className="ticket-severity">severity</div>
-            <div className="ticket-severity">severity</div>
+            <div className="ticket-a-severity a-severity">severity</div>
+            <div className="ticket-a-severity a-name">name</div>
+            <div className="ticket-a-severity a-p-name">project_name</div>
+            <div className="ticket-a-severity a-assigned">assigned_to</div>
+            <div className="ticket-a-severity a-type">type</div>
+            <div className="ticket-a-severity a-status">status</div>
+            <div className="ticket-a-severity a-created">created_at</div>
           </div>
           {ticketsJSX}
+          <Link to={`/add-ticket`}>
+            <button className="button-create-ticket"><i class="fa fa-plus-circle"></i><div className="ticket-button-label">Create Ticket</div></button>
+          </Link>
         </div>
       </div>
     </Layout>
