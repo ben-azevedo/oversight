@@ -135,6 +135,15 @@ User.destroy_all
   image: "https://ca.slack-edge.com/T0351JZQ0-UV20B6JUX-c45619859a41-512"
 )
 
+@raul = User.create!(
+  username: "Raul", 
+  email:"raul@email.com", 
+  password: "123456",
+  permission: "Intern",
+  role: "Project Manager",
+  image: "https://ca.slack-edge.com/T0351JZQ0-UMCED5KEY-87528816781d-512"
+)
+
 puts "#{User.count} users created"
 
 @kgb = Project.create!(
@@ -153,7 +162,7 @@ puts "#{User.count} users created"
 
 @graduate = Project.create!(
   name: "GA Graduation",
-  description: "By completion of this 12-week program in March of 2021, we will have: developed full-stack applications with technologies such as Ruby on Rails and Express with Node.js, built full-stack applications by leveraging common design and architectural patterns like model–view–controller (MVC) and Representational State Transfer (REST), Safely modeled and stored data in SQL and NoSQL databases, created my own API's from scratch, conducted Front-end web application development with React, and built upon my data structures and algorithms knowledge specifically implemented in JavaScript and Ruby.",
+  description: "By completion of this 12-week program in March of 2021, we will have: developed full-stack applications with technologies such as Ruby on Rails and Express with Node.js, built full-stack applications by leveraging common design and architectural patterns like model–view–controller (MVC) and Representational State Transfer (REST), Safely modeled and stored data in SQL and NoSQL databases, created my own API's from scratch, conducted Front-end...",
   image: "https://i.pinimg.com/originals/1a/1d/7f/1a1d7f8785d1275576bd31c18e4006ac.png",
   users: [@aslan, @ayeesha, @ben, @damion, @daniel, @david, @elizabeth, @gigi, @grady, @katiana]
 )
@@ -217,6 +226,26 @@ Ticket.create!(
   status: "Open",
   tipe: "Special Task",
   user: @ben,
+  project: @graduate,
+)
+
+Ticket.create!(
+  name: "GA Completion",
+  description: "Pass all students in the ruby cohort!",
+  severity: "High",
+  status: "Open",
+  tipe: "Special",
+  user: @david,
+  project: @graduate,
+)
+
+Ticket.create!(
+  name: "Feed them kitties",
+  description: "Kitty Cats get hungry too",
+  severity: "High",
+  status: "Open",
+  tipe: "Special",
+  user: @raul,
   project: @graduate,
 )
 

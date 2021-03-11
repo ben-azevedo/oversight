@@ -137,7 +137,7 @@ function App() {
           <Projects projects={projects} currentUser={currentUser}/>
         </Route>
         <Route exact path="/projects/:id">
-          <ProjectDetails currentUser={currentUser}/>
+          <ProjectDetails tickets={tickets} projects={projects} currentUser={currentUser}/>
         </Route>
         <Route exact path="/tickets/:id">
           <TicketDetails tickets={tickets} handleDelete={handleDelete} currentUser={currentUser}/>

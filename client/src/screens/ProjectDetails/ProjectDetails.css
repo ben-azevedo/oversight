@@ -1,0 +1,193 @@
+.project-bottom-details {
+  position: relative;
+}
+
+.project-bottom-details {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  padding-top: 30px;
+}
+
+
+.ass-tickets {
+  width: 100%;
+}
+
+.ass-users-header {
+  background: var(--tone9);
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  color: var(--tone1);
+  font-size: 22px;
+  font-weight: 600;
+  padding-left: 40px;
+}
+
+.ass-tickets-header {
+  background: var(--tone9);
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  color: var(--tone1);
+  font-size: 22px;
+  font-weight: 600;
+  padding-left: 40px;
+}
+
+.project-detail-container {
+  width: 72vw;
+  background: var(--tone1);
+  padding: 20px 35px 35px 35px;
+  position: relative;
+}
+
+.c-severity {
+  width: 110px;
+}
+
+.c-name {
+  width: 180px;
+}
+
+.c-p-name {
+  width: 220px;
+}
+
+.c-assigned {
+  width: 170px;
+}
+
+.c-type {
+  width: 150px;
+}
+
+.c-status {
+  width: 90px;
+}
+
+.c-created {
+  width: 230px;
+}
+.project-desciptors {
+  margin: 85px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+.project-bottom-details {
+  border-top: 2px solid var(--tone5);
+  position: relative;
+}
+
+.project-bottom-details {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  padding-top: 30px;
+}
+
+.ass-users {
+  width: 33%;
+  margin-right: 20px;
+}
+
+.ass-divider {
+  height: 100%;
+  border: 1px solid var(--tone5);
+  position: absolute;
+  left: 410px;
+  top: 0px;
+}
+
+.ass-tickets {
+  width: 66%;
+  margin-left: 40px;
+}
+
+.ass-users-header {
+  background: var(--tone9);
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  color: var(--tone1);
+  font-size: 22px;
+  font-weight: 600;
+  padding-left: 40px;
+}
+
+.ass-tickets-header {
+  background: var(--tone9);
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  color: var(--tone1);
+  font-size: 22px;
+  font-weight: 600;
+  padding-left: 40px;
+}
+
+.project-detail-container {
+  width: 72vw;
+  background: var(--tone1);
+  padding: 20px 35px 35px 35px;
+  position: relative;
+}
+
+.c-severity {
+  width: 110px;
+}
+
+.c-name {
+  width: 180px;
+}
+
+.c-p-name {
+  width: 220px;
+}
+
+.c-assigned {
+  width: 170px;
+}
+
+.c-type {
+  width: 150px;
+}
+
+.c-status {
+  width: 90px;
+}
+
+.c-created {
+  width: 230px;
+}
+.project-desciptors {
+  margin: 85px;
+} */

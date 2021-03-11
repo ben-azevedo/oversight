@@ -17,7 +17,7 @@ function Tickets(props) {
         <div className="a-assigned">{ticket.user?.username}</div>
         <div className="a-type">{ticket.tipe}</div>
         <div className="a-status">{ticket.status}</div>
-        <div className="a-created">{ticket.created_at}</div>
+        <div className="a-created">{`${ticket?.created_at.substring(5, 7)}/${ticket?.created_at.substring(8, 10)}/${ticket?.created_at.substring(0, 4)} ${ticket?.created_at.substring(11, 19)}`}</div>
         <div>details</div>
       </div>
     </Link>

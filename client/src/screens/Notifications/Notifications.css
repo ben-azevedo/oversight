@@ -1,0 +1,27 @@
+.b-severity {
+  width: 140px;
+}
+
+.b-name {
+  width: 220px;
+}
+
+.b-p-name {
+  width: 220px;
+}
+
+.b-type {
+  width: 200px;
+}
+
+.b-status {
+  width: 120px;
+}
+
+.b-created {
+  width: 300px;
+}
+
+.notifications-spacer {
+  height: 50px;
+}

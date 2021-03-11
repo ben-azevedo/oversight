@@ -13,24 +13,35 @@
   --tone12: #000000;
 }
 
-
-/* :root {
-  --tone1: #00ffff;
-  --tone2: #00f2f2;
-  --tone3: #00e6e6;
-  --tone4: #00cccc;
-  --tone5: #00b3b3;
-  --tone6: #009999;
-  --tone7: #008080;
-  --tone8: #006666;
-  --tone9: #004d4d;
-  --tone10: #003333;
-  --tone11: #001919;
-  --tone12: #000000;
-} */
-
-
 * {
   font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
   text-decoration: none;
+}
+
+@media screen and (max-width: 1000px) { 
+  :root {
+    --tone1: #00ffff;
+    --tone2: #00f2f2;
+    --tone3: #00e6e6;
+    --tone4: #00cccc;
+    --tone5: #00b3b3;
+    --tone6: #009999;
+    --tone7: #008080;
+    --tone8: #006666;
+    --tone9: #004d4d;
+    --tone10: #003333;
+    --tone11: #001919;
+    --tone12: #000000;
+  }
+}
+
+@media screen and (max-width: 800px) { 
+  * {
+    font-style: italic;
+    font-weight: 100;
+  }
+
+  :root {
+    --tone12: #FFFFFF;
+  }
 }

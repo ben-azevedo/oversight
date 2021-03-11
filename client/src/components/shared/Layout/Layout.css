@@ -5,7 +5,8 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  color: black;
+  color: var(--tone12);
+  background: var(--tone1);
 }
 
 .left-nav {

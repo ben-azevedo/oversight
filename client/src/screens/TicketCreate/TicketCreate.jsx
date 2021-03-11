@@ -22,7 +22,7 @@ function TicketCreate(props) {
   return (
     <Layout currentUser={props.currentUser}>
       <div className="ticket-edit-container">
-        <div className="ticket-edit-header">Edit Ticket</div>
+        <div className="ticket-edit-header">Create Ticket</div>
         <div className="ticket-edit-content">
           <form onSubmit={(e) => {
             e.preventDefault();
@@ -86,8 +86,8 @@ function TicketCreate(props) {
             </label>
             <br />
             <button className="ticket-edit-button">
-              <i class="fa fa-pencil"></i>
-              <div className="ticket-edit-button-label">Update</div>
+              <i class="fa fa-plus-circle"></i>
+              <div className="ticket-edit-button-label">Create</div>
             </button>
           </form>
         </div>
